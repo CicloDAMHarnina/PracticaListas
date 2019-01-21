@@ -1,0 +1,44 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import logica.Acciones;
+import modelo.Colores;
+
+public class AccionesTest {
+	
+	Acciones acciones = new Acciones();
+	ArrayList<Colores> repetidos = new ArrayList<>();
+	int ronda = 3;
+	
+	
+	@Test
+	public void testSeleccionarColor() {
+		ArrayList<Colores> repetidos = new ArrayList<>();
+		int ronda = 3;
+		
+		repetidos.add(Colores.azul);
+		repetidos.add(Colores.amarillo);
+		for (int i = 0; i < 2; i++) {
+			assertFalse(Colores.azul.equals(acciones.seleccionarColor(repetidos, ronda)));
+			assertFalse(Colores.amarillo.equals(acciones.seleccionarColor(repetidos, ronda)));
+		}	
+	}
+	
+	@Test
+	public void testAumentarRonda(){
+		ArrayList<Colores> repetidos = new ArrayList<>();
+		int ronda = 5;
+		repetidos.add(Colores.naranja);
+		acciones.aumentarRonda(this.repetidos, ronda);
+		assertTrue(this.repetidos.isEmpty());
+	}
+	
+
+
+}

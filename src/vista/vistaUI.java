@@ -12,6 +12,7 @@ public class vistaUI extends JFrame {
 	private JPanel contentPane;
 	protected vistaUno vistaUno;
 	protected vistaDos vistaDos;
+	protected vistaFinal vistaFinal;
 
 	/**
 	 * Create the frame.
@@ -19,6 +20,7 @@ public class vistaUI extends JFrame {
 	public vistaUI() {
 		vistaUno= new vistaUno();
 		vistaDos= new vistaDos();
+		vistaFinal= new vistaFinal();
 		
 	}
 

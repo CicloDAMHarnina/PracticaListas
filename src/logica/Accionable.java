@@ -12,11 +12,6 @@ public interface Accionable {
 	public ArrayList<Colores> seleccionarColor(ArrayList<Colores> repetidos, int ronda);
 	
 	/**
-	 * Da a elegir los cinco colores sin tener en cuenta los repetidos. Solo se puede hacer cinco veces
-	 */
-	public Colores pedirColor();
-	
-	/**
 	 * Usa el método "equilibrarPilas" de Datos para barajarlas y ponerlas al mismo tamaño (si es impar la primera es la peque)
 	 */
 	public void barajar();

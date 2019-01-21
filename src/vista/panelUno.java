@@ -15,7 +15,7 @@ import java.awt.Graphics;
 import java.awt.Color;
 
 public class panelUno extends JPanel {
-	private JTextField textField;
+	private JTextField numeroMonedas;
 	private JTextField txtMensaje;
 	private JPanel cola;
 	private JPanel pilaUno;
@@ -36,22 +36,22 @@ public class panelUno extends JPanel {
 
 		cola = new JPanel();
 		cola.setBackground(Color.WHITE);
-		cola.setBounds(162, 50, 400, 35);
+		cola.setBounds(162, 50, 570, 35);
 		add(cola);
 
 		pilaUno = new JPanel();
 		pilaUno.setBackground(Color.WHITE);
-		pilaUno.setBounds(162, 113, 322, 25);
+		pilaUno.setBounds(162, 105, 570, 35);
 		add(pilaUno);
 
 		pilaDos = new JPanel();
 		pilaDos.setBackground(Color.WHITE);
-		pilaDos.setBounds(162, 149, 322, 25);
+		pilaDos.setBounds(162, 149, 570, 35);
 		add(pilaDos);
 
 		lista = new JPanel();
 		lista.setBackground(Color.WHITE);
-		lista.setBounds(183, 221, 449, 125);
+		lista.setBounds(162, 200, 570, 150);
 		add(lista);
 
 		lblCola = new JLabel("Cola");
@@ -75,15 +75,15 @@ public class panelUno extends JPanel {
 		lblLista = new JLabel("Lista");
 		lblLista.setForeground(new Color(0, 0, 102));
 		lblLista.setFont(new Font("Give You Glory", Font.BOLD | Font.ITALIC, 16));
-		lblLista.setBounds(119, 274, 54, 25);
+		lblLista.setBounds(49, 244, 67, 25);
 		add(lblLista);
 
-		textField = new JTextField();
-		textField.setFont(new Font("Give You Glory", Font.BOLD | Font.ITALIC, 16));
-		textField.setBounds(103, 398, 171, 25);
-		textField.setEnabled(false);
-		add(textField);
-		textField.setColumns(10);
+		numeroMonedas = new JTextField();
+		numeroMonedas.setForeground(new Color(0,0,102));
+		numeroMonedas.setFont(new Font("Give You Glory", Font.BOLD | Font.ITALIC, 16));
+		numeroMonedas.setBounds(103, 398, 300, 25);
+		numeroMonedas.setEditable(false);
+		add(numeroMonedas);
 
 		lblIconoMonedas = new JLabel("");
 		lblIconoMonedas.setBounds(27, 377, 67, 63);
@@ -95,25 +95,27 @@ public class panelUno extends JPanel {
 		lblIconoMonedas.setIcon(iconoEscalado);
 		add(lblIconoMonedas);
 
-		txtMensaje = new JTextField();
+		/*txtMensaje = new JTextField();
 		txtMensaje.setBounds(376, 400, 334, 40);
 		txtMensaje.setEnabled(false);
 		add(txtMensaje);
-		txtMensaje.setColumns(10);
+		txtMensaje.setColumns(10);*/
 
-	}
-
-	public JTextField getCogerTextField() {
-		return textField;
-	}
-
-	public void setCambiarTextField(JTextField textField) {
-		this.textField = textField;
 	}
 
 	public JTextField getCogerTxtMensaje() {
 		return txtMensaje;
 	}
+
+	public JTextField getCogerNumeroMonedas() {
+		return numeroMonedas;
+	}
+
+
+	public void setCogerNumeroMonedas(JTextField numeroMonedas) {
+		this.numeroMonedas = numeroMonedas;
+	}
+
 
 	public void setCambiarTxtMensaje(JTextField txtMensaje) {
 		this.txtMensaje = txtMensaje;

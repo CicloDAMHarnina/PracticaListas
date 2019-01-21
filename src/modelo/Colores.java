@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public enum Colores{
 
 	rojo(Color.red, "rojo"), amarillo(Color.YELLOW, "amarillo"), azul(Color.BLUE, "azul"), verde(Color.GREEN,
-			"verde"), naranja(Color.orange, "naranja");
+			"verde"), naranja(Color.orange, "naranja"), blanco(Color.white, "blanco");
 	private Color color;
 	private String nombre;
 
@@ -33,5 +33,18 @@ public enum Colores{
 	public String toString() {
 		return this.nombre;
 	}
-
+	
+	/**
+	 * Como el equals no se puede poner en una enumeración pues pongo este método para poder usarlo en las listas. No compara bien con el 
+	 * equals por defecto
+	 * @param color
+	 * @return
+	 */
+	public boolean compararColores(Colores color){
+		if(super.toString().equals(color.toString())){
+			return true;
+		}
+		else
+			return false;
+	}
 }

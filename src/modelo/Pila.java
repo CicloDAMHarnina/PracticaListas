@@ -7,9 +7,9 @@ public class Pila implements Pilable {
 
 	private LinkedList<Colores> pila;
 
-	public Pila() {
+	public Pila(LinkedList<Colores> pila) {
 		super();
-		this.pila= new LinkedList<Colores>();
+		this.pila= pila;
 	}
 
 	public LinkedList<Colores> getPila() {
@@ -29,6 +29,13 @@ public class Pila implements Pilable {
 	@Override
 	public Colores desApilar() {
 		return this.pila.removeFirst();
+	}
+	
+	public void apilarBlanco(){
+		this.pila.addFirst(Colores.blanco);
+	}
+	public Colores desApilarBlanco(){
+		return this.pila.removeLast();
 	}
 	
 	//rellena una pila con otra directamente. Lo usaba en equilibrarPila antiguamente pero ahora uso Iterator

@@ -1,0 +1,71 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import logica.Datos;
+import modelo.Colores;
+import utiles.Constantes;
+
+public class DatosTest {
+
+	Datos datos = new Datos();
+	
+	@Test
+	public void testSortearColor() {//la unica posibilidad que queda es que devuelva el verde 
+		//porque los demas colores estan en la lista repetidos
+		ArrayList<Colores> repetidos = new ArrayList<Colores>();
+		repetidos.add(Colores.azul);
+		repetidos.add(Colores.rojo);
+		repetidos.add(Colores.naranja);
+		repetidos.add(Colores.amarillo);
+		assertEquals(Colores.verde, datos.sortearColor(repetidos));
+	}
+	
+	@Test
+	public void testGenerarLista(){
+		assertEquals(20, datos.generarLista().size());
+		
+		LinkedList<Colores> fila = datos.generarLista();
+		
+		for (int i = 0; i < Constantes.tamanioLista; i++) {
+			assertEquals(Colores.blanco, fila.get(i));
+		}
+	
+	}
+	
+	@Test
+	public void testGenerarPilaUno(){
+		assertEquals(3, datos.generarPilaUno().size());
+		
+		LinkedList<Colores> pilaUno = datos.generarPilaUno();
+		
+		for (int i = 0; i < Constantes.tamanioPilaUno; i++) {
+			assertEquals(Colores.blanco, pilaUno.get(i));
+		}
+		
+	}
+	
+	@Test
+	public void testGenerarPilaDos(){
+		assertEquals(4, datos.generarPilaDos().size());
+		
+		LinkedList<Colores> pilaDos = datos.generarPilaDos();
+		
+		for (int i = 0; i < Constantes.tamanioPilaDos; i++) {
+			assertEquals(Colores.blanco, pilaDos.get(i));
+		}
+		
+	}
+	
+	@Test
+	public void testGenerarCola(){
+		assertEquals(10, datos.generarCola().size());
+	}
+
+}

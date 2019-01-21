@@ -28,21 +28,6 @@ public class vistaUno extends JFrame {
 	private JLabel lblIcono;
 	private JLabel lblJuegoPicoli;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					vistaUno frame = new vistaUno();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.

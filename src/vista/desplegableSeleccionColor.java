@@ -18,23 +18,7 @@ public class desplegableSeleccionColor extends JFrame {
 	private JPanel contentPane;
 	private JComboBox comboBox;
 	private JPanel panel;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					desplegableSeleccionColor frame = new desplegableSeleccionColor();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Create the frame.
 	 */
